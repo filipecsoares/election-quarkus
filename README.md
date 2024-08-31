@@ -7,4 +7,13 @@ This is an activity for a course on Development with Quarkus.
 
 - Candidate Management
 - Election Management
-- Voter Management
+- Vote Management
+
+## Technologies
+
+- **Quarkus** - A framework for building cloud-native Java applications
+- **Flyway** - Version control for database
+- **Jeager Tracing** - Distributed tracing system
+- **Graylog** - Log management system
+- **OpenSearch** - Search and analytics engine
+- **Traefik** - HTTP reverse proxy and load balancer
