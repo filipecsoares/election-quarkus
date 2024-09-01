@@ -48,8 +48,7 @@ public class CandidateRepositorySQL implements CandidateRepository {
             CriteriaBuilder cb,
             Root<infrastructure.repositories.entities.Candidate> root) {
         return Stream.of(query.ids().map(id -> cb.in(root.get("id")).value(id)),
-                        query.name().map(name -> cb.or(cb.like(cb.lower(root.get("familyName")), name.toLowerCase() + "%"),
-                                cb.like(cb.lower(root.get("givenName")), name.toLowerCase() + "%"))))
+                        query.name().map(name -> cb.like(cb.lower(root.get("name")), name.toLowerCase() + "%")))
                 .flatMap(Optional::stream)
                 .toArray(Predicate[]::new);
     }
